@@ -1,6 +1,6 @@
-| "Active pathogen first."
+"Active pathogen first."
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
+"Turn on line numbers."
 set number
-command! Status echo "All systems are go!"
