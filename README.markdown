@@ -9,23 +9,24 @@ running the commands:
     git submodule init
     git submodule update
 
-Create symlinks:
+BASH
+===
+
+Create symlink:
 
     ln -s ~/dotfiles/bashrc ~/.bashrc
-    ln -s ~/dotfiles/vimrc ~/.vimrc
-    ln -s ~/dotfiles/gvimrc ~/.gvimrc
-    ln -s ~/dotfiles/irbrc ~/.irbrc
-    ln -s ~/dotfiles/vim ~/.vim
-    ln -s ~/dotfiles/ctags ~/.ctags
-    ln -s ~/dotfiles/jshintrc ~/.jshintrc
-
-I put Vim's backup and swap files in `~/tmp`, so that directory must exist. To
-be sure, run: 
-
-    mkdir ~/tmp
 
 VIM
 ===
+
+Create symlinks:
+
+    ln -s ~/dotfiles/vimrc ~/.vimrc
+    ln -s ~/dotfiles/gvimrc ~/.gvimrc
+
+I put Vim's backup and swap files in `~/tmp`, so that directory must exist. Tobe sure, run: 
+
+    mkdir ~/tmp
 
 My preferences for Vim are stored in `dotfiles/vimrc` and `dotfiles/gvimrc`
 respectively. All plugins and scripts are stored in the `dotfiles/vim`
@@ -57,6 +58,12 @@ as follows:
 CREDIT
 ===
 
-This attempt at version controlling was powered by vimcast.org.
-http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/
-https://raw.github.com/nelstrom/dotfiles/master/README.markdown
+This attempt at version controlling was powered by [vimcast.org][vco].
+[Syncronizing plugins with git submodules and pathogen][vcopost]http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/]
+[nelstrom dotfiles README][nel]https://raw.github.com/nelstrom/dotfiles/master/README.markdown
+
+[vco]: http://vimcast.org
+[vcopost]: http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/
+[nel]: https://raw.github.com/nelstrom/dotfiles/master/README.markdown
+
+
