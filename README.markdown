@@ -52,3 +52,11 @@ as follows:
 
     git add .
     git ci -m "Added the javascript bundle"
+
+
+CREDIT
+===
+
+This attempt at version controlling was powered by vimcast.org.
+http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/
+https://raw.github.com/nelstrom/dotfiles/master/README.markdown
