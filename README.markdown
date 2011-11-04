@@ -1,4 +1,12 @@
-Installation
+INSTALLATION
+===
+
+Things that should be a given:
+
+    sudo apt-get install vim
+    sudo apt-get install git
+
+To install this git repro run:
 
     git clone git://github.com/nathanrosspowell/dotfiles.git
 
@@ -36,22 +44,30 @@ Adding Plugin Bundles
 ---------------------
 
 Plugins that are published on github can be installed as submodules.
-For example, to install the [JavaScript bundle][jsbun], follow these steps:
+For example, to install the [pyflakes-vim][jsbun], follow these steps:
 
     cd ~/dotfiles
-    git submodule add http://github.com/pangloss/vim-javascript.git vim/bundle/vim-javascript
+    git submodule add https://github.com/kevinw/pyflakes-vim.git vim/bundle/pyflakes
 
 This will update the `.gitmodules` file by appending something like:
 
-    [submodule "vim/bundle/vim-javascript"]
-        path = vim/bundle/vim-javascript
-        url = http://github.com/pangloss/vim-javascript.git
-    
-As well as checkout out the git repo into the `vim/bundle/vim-javascript` directory.
+    [submodule "vim/bundle/pyflakes"]
+        path = vim/bundle/pyflakes
+        url =  http://github.com/kevinw/pyflakes-vim.git
+
+As well as checkout out the git repo into the `vim/bundle/pyflakes` directory.
 You can then commit these changes as follows:
 
     git add .
-    git ci -m "Added the javascript bundle"
+    git ci -m "[ADD] pyflakes-vim submodule to pyflakes."
+
+
+Bundles with prerequisites
+--------------------------
+
+pyflakes-vim
+
+    sudo pip install pyflakes
 
 
 CREDIT
