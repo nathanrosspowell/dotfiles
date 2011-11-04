@@ -1,6 +1,8 @@
 "Active pathogen first."
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
+call pathogen#infect()
+
+" Something...
+filetype plugin indent on
 
 "Turn on line numbers."
 set number
