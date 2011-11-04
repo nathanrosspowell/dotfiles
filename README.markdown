@@ -44,7 +44,7 @@ Adding Plugin Bundles
 ---------------------
 
 Plugins that are published on github can be installed as submodules.
-For example, to install the [pyflakes-vim][jsbun], follow these steps:
+For example, to install the [pyflakes-vim][pyflake], follow these steps:
 
     cd ~/dotfiles
     git submodule add https://github.com/kevinw/pyflakes-vim.git vim/bundle/pyflakes
@@ -73,12 +73,10 @@ pyflakes-vim
 CREDIT
 ===
 
-This attempt at version controlling was powered by [vimcast.org][vco].
-[Syncronizing plugins with git submodules and pathogen][vcopost]http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/]
-[nelstrom dotfiles README][nel]https://raw.github.com/nelstrom/dotfiles/master/README.markdown
+This attempt at version controlling was powered by [vimcast.org][vco], [Syncronizing plugins with git submodules and pathogen][vcopost], [nelstrom dotfiles README][nel].
 
 [vco]: http://vimcast.org
 [vcopost]: http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/
 [nel]: https://raw.github.com/nelstrom/dotfiles/master/README.markdown
-
+[pyflake]: https://github.com/kevinw/pyflakes-vim
 
