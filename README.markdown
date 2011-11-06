@@ -20,13 +20,27 @@ The font Inconsolata is used when available:
 
     sudo apt-get install ttf-inconsolata
 
-
 BASH
 ===
 
 Create symlink:
 
     ln -s ~/dotfiles/bashrc ~/.bashrc
+
+For gnome-terminal, here are the colour pallet settings:
+
+    #3F3F3F3F3F3F:#CCCC93939393:#7F7F9F9F7F7F:#E3E3CECEABAB:#DFDFAFAF8F8F:#CCCC93939393:#8C8CD0D0D3D3:#DCDCDCDCCCCC:#3F3F3F3F3F3F:#CCCC93939393:#7F7F9F9F7F7F:#E3E3CECEABAB:#DFDFAFAF8F8F:#CCCC93939393:#8C8CD0D0D3D3:#DCDCDCDCCCCC
+
+1. Make sure that your menu bar is showing. If it is not, right click on the terminal window and select “Show menubar”.
+2. In the Edit menu, select “Profiles…”
+3. Create a new profile with whatever name you like.
+4. In your terminal, start the program “gconf-editor”.
+5. Navigate to “/apps/gnome-terminal/profiles/” and then to whatever you called the profile. If it does not show up with name, it might be called something like “Profile0″. If the latter is the case for you, check the “visible_name” property, which should match your chosen name.
+6. Double click on the “palette” property.
+7. Remove the current contents, and paste the above color palette string
+8. Close everything related to gconf-editor.
+9. Switch to the profile you selected via the Terminal’s Edit menu, and (if you want) change it to the default profile in Edit -> “Profiles…”.
+
 
 VIM
 ===
