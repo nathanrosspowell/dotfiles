@@ -16,6 +16,11 @@ Where possible, Vim plugins are installed as git submodules. Check these out by 
     git submodule init
     git submodule update
 
+The font Inconsolata is used when available:
+
+    sudo apt-get install ttf-inconsolata
+
+
 BASH
 ===
 
