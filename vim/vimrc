@@ -1,8 +1,31 @@
-"Active pathogen first."
+" Active pathogen first.
 call pathogen#infect()
 
-" Something...
+" Activate all of the plugins functionality.
 filetype plugin indent on
 
-"Turn on line numbers."
+" Turn on line numbers.
 set number
+
+" Tabs -> spaces.
+set expandtab
+
+" Tab = 4 spaces in size.
+set tabstop=4
+
+" Code folding. Use za command.
+set foldmethod=indent
+set foldlevel=99
+
+" Use Zenburn colour scheme
+set t_Co=256
+set background=dark
+colorscheme zenburn
+
+" Extra file typles
+syntax on
+filetype on
+au BufNewFile,BufRead *.hamlpy set filetype=haml
+
+" Set the font.
+set guifont=Inconsolata\ 10
