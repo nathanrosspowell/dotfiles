@@ -22,3 +22,6 @@
 [submodule "vim/bundle/scss"]
 	path = vim/bundle/scss
 	url = https://github.com/cakebaker/scss-syntax.vim
+[submodule "vim/bundle/easytags"]
+	path = vim/bundle/easytags
+	url = https://github.com/xolox/vim-easytags.git

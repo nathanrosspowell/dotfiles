@@ -89,6 +89,10 @@ pyflakes-vim
 
     sudo pip install pyflakes
 
+easytags
+
+    sudo apt-get install exuberant-ctags
+
 WINDOWS GVIM
 ===
 
