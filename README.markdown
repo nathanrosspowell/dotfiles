@@ -16,7 +16,9 @@ Where possible, Vim plugins are installed as git submodules. Check these out by 
     git submodule init
     git submodule update
 
-The font Inconsolata is used when available:
+If you are using the .zip download, please extract the file `vim/submodules.zip` to get the submodule content.
+
+The font Consolas is used when available on Windows and Inconsolata is used when available on Linux. Get it here:
 
     sudo apt-get install ttf-inconsolata
 
