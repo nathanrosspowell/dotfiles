@@ -41,7 +41,6 @@ For gnome-terminal, here are the colour pallet settings:
 8. Close everything related to gconf-editor.
 9. Switch to the profile you selected via the Terminal’s Edit menu, and (if you want) change it to the default profile in Edit -> “Profiles…”.
 
-
 VIM
 ===
 
