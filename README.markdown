@@ -111,4 +111,4 @@ This attempt at version controlling was powered by [vimcast.org][vco], [Syncroni
 [nel]: https://raw.github.com/nelstrom/dotfiles/master/README.markdown
 [pyflake]: https://github.com/kevinw/pyflakes-vim
 [gvim]: http://www.vim.org/download.php
-[mklink]: technet.microsoft.com/en-us/library/cc753194(WS.10).aspx
+[mklink]: http://technet.microsoft.com/en-us/library/cc753194(WS.10).aspxi 
