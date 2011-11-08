@@ -88,6 +88,17 @@ pyflakes-vim
 
     sudo pip install pyflakes
 
+WINDOWS GVIM
+===
+
+For windows, there need to be a few changes.
+Install [gVim][gvim] then make the following changes:
+
+    .vimrc -> _vimrc
+    .gvimrc -> _gvimrc
+    vim dir -> vimfiles
+    
+And make the symlinks using the [MDLINK][mklink] command.
 
 CREDIT
 ===
@@ -98,4 +109,5 @@ This attempt at version controlling was powered by [vimcast.org][vco], [Syncroni
 [vcopost]: http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/
 [nel]: https://raw.github.com/nelstrom/dotfiles/master/README.markdown
 [pyflake]: https://github.com/kevinw/pyflakes-vim
-
+[gvim]: http://www.vim.org/download.php
+[mklink]: technet.microsoft.com/en-us/library/cc753194(WS.10).aspx
