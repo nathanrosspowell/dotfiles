@@ -28,3 +28,6 @@
 [submodule "vim/bundle/taghighlight"]
 	path = vim/bundle/taghighlight
 	url = https://github.com/abudden/TagHighlight.git
+[submodule "vim/bundle/nerdtree"]
+	path = vim/bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
