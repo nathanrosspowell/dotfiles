@@ -93,6 +93,15 @@ easytags
 
     sudo apt-get install exuberant-ctags
 
+coffeescript
+
+    sudo apt-get install g++ curl libssl-dev apache2-utils
+    git clone git://github.com/ry/node.git
+    cd node
+    ./configure
+    make
+    sudo make install
+
 WINDOWS GVIM
 ===
 
