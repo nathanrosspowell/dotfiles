@@ -93,7 +93,7 @@ easytags
 
     sudo apt-get install exuberant-ctags
 
-coffeescript
+coffeescript linux
 
     sudo apt-get install g++ curl libssl-dev apache2-utils
     git clone git://github.com/ry/node.git
@@ -101,6 +101,10 @@ coffeescript
     ./configure
     make
     sudo make install
+    cd
+    curl http://npmjs.org/install.sh | sudo sh
+    sudo  npm install -g coffee-script
+
 
 WINDOWS GVIM
 ===
