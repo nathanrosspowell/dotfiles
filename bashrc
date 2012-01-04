@@ -51,3 +51,7 @@ fi
 
 # Set 256 mode for vim colour configs.
 export TERM="xterm-256color" 
+
+
+# Scala
+PATH="$PATH:/opt/scala-2.9.1.final/bin"
