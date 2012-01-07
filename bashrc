@@ -28,6 +28,9 @@ if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
 fi
 
+# Set 256 mode for vim colour configs.
+export TERM="xterm-256color" 
+
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
     xterm-color) color_prompt=yes;;
@@ -49,9 +52,28 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
-# Set 256 mode for vim colour configs.
-export TERM="xterm-256color" 
-
-
 # Scala
 PATH="$PATH:/opt/scala-2.9.1.final/bin"
+
+# Custom vars
+currentProject=cor
+
+# Custom functions.
+cdProject()
+{
+    cd
+    if [ -z "$1" ] # Is parameter #1 zero length?
+    then
+       cd "projects" 
+    else
+       cd "projects/${currentProject}-$1" 
+    fi
+    return 0
+}
+
+# Custom aliases
+alias ..='cd ..'
+alias cdpro='cdProject'
+alias cdgame='cdProject game'
+alias cdtool='cdProject tool'
+alias cddoc='cdProject doc'
