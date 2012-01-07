@@ -37,7 +37,7 @@ For gnome-terminal, here are the colour pallet settings:
 2. In the Edit menu, select “Profiles…”
 3. Create a new profile with whatever name you like.
 4. In your terminal, start the program “gconf-editor”.
-5. Navigate to “/apps/gnome-terminal/profiles/” and then to whatever you called the profile. If it does not show up with name, it might be called something like “Profile0″. If the latter is the case for you, check the “visible_name” property, which should match your chosen name.
+5. Navigate to “/apps/gnome-terminal/profiles/” and then to whatever you called the profile. If it does not show up with name, it might be called something like “Profile0″. If the latter is the case for you, check the “visible-name” property, which should match your chosen name.
 6. Double click on the “palette” property.
 7. Remove the current contents, and paste the above color palette string
 8. Close everything related to gconf-editor.
