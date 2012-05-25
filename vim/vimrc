@@ -86,3 +86,5 @@ if has("autocmd")
         autocmd bufwritepost vimrc source $MYVIMRC
     endif
 endif
+
+au BufRead,BufNewFile *.inl set filetype=cpp
