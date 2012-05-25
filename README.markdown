@@ -3,8 +3,7 @@ INSTALLATION
 
 Things that should be a given:
 
-    sudo apt-get install vim
-    sudo apt-get install git
+    sudo apt-get install vim git
 
 To install this git repro run:
 
@@ -42,6 +41,16 @@ For gnome-terminal, here are the colour pallet settings:
 7. Remove the current contents, and paste the above color palette string
 8. Close everything related to gconf-editor.
 9. Switch to the profile you selected via the Terminal’s Edit menu, and (if you want) change it to the default profile in Edit -> “Profiles…”.
+
+Bash additions
+--------------
+
+[Hub][hub] is used to enable easier [GitHub][github] commands.
+
+    curl http://defunkt.io/hub/standalone -sLo ~/bin/hub
+    chmod +x ~/bin/hub
+    # alias it as git in bashrc
+    alias git=hub
 
 VIM
 ===
@@ -130,4 +139,4 @@ This attempt at version controlling was powered by [vimcast.org][vco], [Syncroni
 [pyflake]: https://github.com/kevinw/pyflakes-vim
 [gvim]: http://www.vim.org/download.php
 [mklink]: http://technet.microsoft.com/en-us/library/cc753194(WS.10).aspxi 
-
+[huv]: http://defunkt.io/hub/
