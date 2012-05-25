@@ -23,6 +23,8 @@ ln -s ~/dotfiles/vim/autoload/pathogen/autoload/pathogen.vim ~/dotfiles/vim/auto
 mkdir ~/tmp
 
 # Hub.
+mkdir ~/bin
+mkdir ~/bin/hub
 curl http://defunkt.io/hub/standalone -sLo ~/bin/hub
 chmod +x ~/bin/hub
 
