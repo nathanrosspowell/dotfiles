@@ -21,6 +21,11 @@ The font Consolas is used when available on Windows and Inconsolata is used when
 
     sudo apt-get install ttf-inconsolata
 
+Master install
+===
+
+For ease of use, all of the needed symlinks and software has been added to the file `install.bash`. This should be kept up to date and will set up the wwhole enviroment. The rest of the README should explain what is going on.
+
 BASH
 ===
 
@@ -45,7 +50,7 @@ For gnome-terminal, here are the colour pallet settings:
 Bash additions
 --------------
 
-[Hub][hub] is used to enable easier [GitHub][github] commands.
+[Hub][hub] is used to enable easier git commands wth [GitHub][github].
 
     curl http://defunkt.io/hub/standalone -sLo ~/bin/hub
     chmod +x ~/bin/hub
@@ -139,4 +144,5 @@ This attempt at version controlling was powered by [vimcast.org][vco], [Syncroni
 [pyflake]: https://github.com/kevinw/pyflakes-vim
 [gvim]: http://www.vim.org/download.php
 [mklink]: http://technet.microsoft.com/en-us/library/cc753194(WS.10).aspxi 
-[huv]: http://defunkt.io/hub/
+[hub]: http://defunkt.io/hub/
+[github]: http://github.com
