@@ -1,3 +1,7 @@
+# git submodules.
+git submodule init
+git submodule update
+
 # Install all software.
 sudo apt-get install ttf-inconsolata exuberant-ctags python-setuptools curl
 sudo easy_install pip
