@@ -77,3 +77,8 @@ alias cdpro='cdProject'
 alias cdgame='cdProject game'
 alias cdtool='cdProject tool'
 alias cddoc='cdProject doc'
+
+alias pu='pushd'
+alias po='popd'
+
+alias git=hub
