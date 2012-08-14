@@ -52,33 +52,31 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
+# Home bin onto path.
+PATH=$PATH:$HOME/bin
+
 # Scala
 PATH="$PATH:/opt/scala-2.9.1.final/bin"
 
-# Custom vars
-currentProject=cor
-
 # Custom functions.
-cdProject()
+pupro()
 {
-    cd
     if [ -z "$1" ] # Is parameter #1 zero length?
     then
-       cd "projects" 
+       pushd "projects" 
     else
-       cd "projects/${currentProject}-$1" 
+       pushd "projects/$1" 
     fi
     return 0
 }
 
 # Custom aliases
 alias ..='cd ..'
-alias cdpro='cdProject'
-alias cdgame='cdProject game'
-alias cdtool='cdProject tool'
-alias cddoc='cdProject doc'
+alias pupro='pupro'
+alias pugame='pupro cor-game'
+alias putool='pupro cor-tool'
 
 alias pu='pushd'
 alias po='popd'
 
-alias git=hub
+alias git='hub'
