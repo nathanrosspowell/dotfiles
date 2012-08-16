@@ -63,9 +63,9 @@ pupro()
 {
     if [ -z "$1" ] # Is parameter #1 zero length?
     then
-       pushd "projects" 
+       pushd ~/projects 
     else
-       pushd "projects/$1" 
+       pushd ~/projects/$1 
     fi
     return 0
 }
@@ -79,4 +79,4 @@ alias putool='pupro cor-tool'
 alias pu='pushd'
 alias po='popd'
 
-alias git='hub'
+#####alias git='hub'
