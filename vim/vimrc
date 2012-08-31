@@ -88,3 +88,4 @@ if has("autocmd")
 endif
 
 au BufRead,BufNewFile *.inl set filetype=cpp
+au BufNewFile,BufRead *.cpp set syntax=cpp11
