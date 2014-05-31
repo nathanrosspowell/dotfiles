@@ -15,6 +15,7 @@ create_new_symlink () {
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Get the current directory.
 current_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+pushd current_dir
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Install all needed software.
 package_list=(
@@ -25,7 +26,7 @@ sudo apt-get install ${package_list[@]}
 sudo apt-get autoremove
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Symbolic link for bashrc.
-create_new_symlink $current_dir/bashrc ~/.bashrc
+create_new_symlink bashrc ~/.bashrc
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # git submodules. 
 git submodule update --init --recursive
@@ -37,4 +38,6 @@ do
     echo Executing $script
     bash $script
 done
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+popd
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
