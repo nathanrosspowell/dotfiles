@@ -1,22 +1,40 @@
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Function to remove files and create symbolic links.
+create_new_symlink () {
+    if [ -f $2 ];
+    then
+        echo Removing file $2
+        rm $2
+    elif [ -h $2 ];
+    then
+        echo Removing symbolic link to $2
+        rm $2
+    fi
+    ln -s $1 $2
+}
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Get the current directory.
+current_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Install all needed software.
-packageList=(
+package_list=(
     curl
     ttf-inconsolata
 )
-sudo apt-get install ${packagelist[@]}
+sudo apt-get install ${package_list[@]}
 sudo apt-get autoremove
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Symbolic link for bashrc.
-Symbolic links for vim
-currentDir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-if [ -f ~/.bashrc ];
-then
-    rm ~/.bashrc
-fi
-ln -s currentDir/bashrc ~/.bashrc
+create_new_symlink $current_dir/bashrc ~/.bashrc
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# git submodules.
-git submodule init
-git submodule update
+# git submodules. 
+git submodule update --init --recursive
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Find all 'install.bash' files in submodules and call them.
+install_scripts=$(find ./*/ -name install.bash)
+for script in $install_scripts
+do
+    echo Executing $script
+    bash $script
+done
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

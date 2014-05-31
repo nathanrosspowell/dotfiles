@@ -55,28 +55,7 @@ fi
 # Home bin onto path.
 PATH=$PATH:$HOME/bin
 
-# Scala
-PATH="$PATH:/opt/scala-2.9.1.final/bin"
-
-# Custom functions.
-pupro()
-{
-    if [ -z "$1" ] # Is parameter #1 zero length?
-    then
-       pushd ~/projects 
-    else
-       pushd ~/projects/$1 
-    fi
-    return 0
-}
-
 # Custom aliases
 alias ..='cd ..'
-alias pupro='pupro'
-alias pugame='pupro cor-game'
-alias putool='pupro cor-tool'
-
 alias pu='pushd'
 alias po='popd'
-
-#####alias git='hub'
