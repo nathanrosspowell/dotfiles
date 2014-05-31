@@ -10,12 +10,12 @@ create_new_symlink () {
         echo Removing symbolic link to $2
         rm $2
     fi
-    ln -s $1 $2
+    ln -s --relative $1 $2
 }
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# Get the current directory.
+# Get the current dir of this script.
 current_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-pushd current_dir
+pushd $current_dir
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Install all needed software.
 package_list=(
