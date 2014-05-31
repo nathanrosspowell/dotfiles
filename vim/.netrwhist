@@ -1,8 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/home/nathan/dotfiles'
-let g:netrw_dirhist_2='/home/nathan/dotfiles/vim/bundle/zenburn'
-let g:netrw_dirhist_3='/home/nathan/dotfiles/vim/bundle/zenburn/colors'
-let g:netrw_dirhist_4='/home/nathan/dotfiles/vim'
-let g:netrw_dirhist_5='/home/nathan/dotfiles/vim/bundle/zenburn'
-let g:netrw_dirhist_6='/home/nathan/srv/www/nrp/blog'

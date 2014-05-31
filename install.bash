@@ -1,31 +1,22 @@
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Install all needed software.
+packageList=(
+    curl
+    ttf-inconsolata
+)
+sudo apt-get install ${packagelist[@]}
+sudo apt-get autoremove
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Symbolic link for bashrc.
+Symbolic links for vim
+currentDir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+if [ -f ~/.bashrc ];
+then
+    rm ~/.bashrc
+fi
+ln -s currentDir/bashrc ~/.bashrc
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # git submodules.
 git submodule init
 git submodule update
-
-# Install all software.
-sudo apt-get install ttf-inconsolata exuberant-ctags python-setuptools curl
-sudo easy_install pip
-sudo pip install pyflakes
-
-# Bashrc
-rm ~/.bashrc
-ln -s ~/dotfiles/bashrc ~/.bashrc
-
-# Vimrc
-rm ~/.vim
-ln -s ~/dotfiles/vim ~/.vim
-rm ~/.vimrc
-ln -s ~/dotfiles/vim/vimrc ~/.vimrc
-rm ~/.gvimrc
-ln -s ~/dotfiles/vim/gvimrc ~/.gvimrc
-ln -s ~/dotfiles/vim/autoload/pathogen/autoload/pathogen.vim ~/dotfiles/vim/autoload/pathogen.vim
-
-mkdir ~/tmp
-
-# Hub.
-mkdir ~/bin
-mkdir ~/bin/hub
-curl http://defunkt.io/hub/standalone -sLo ~/bin/hub
-chmod +x ~/bin/hub
-
-
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
