@@ -24,7 +24,7 @@ Submodules
 I'm experimenting with hosting groups of dotfiles in their own git reposiroties.
 The idea is that I can use them idividually if needed e.g. on a raspberry pi I might not want to install all of the dotfile configuration.
 
-## Current submodiles
+### Current submodiles
 
 * [vim](https://github.com/nathanrosspowell/vim) 
 
